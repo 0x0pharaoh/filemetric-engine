@@ -4,10 +4,23 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "filemetric-engine"
-version = "1.0.1"
-description = "Compare text files by similarity percentage"
+version = "1.1.0"
+description = "A lightweight file similarity engine using vector indexing"
+readme = "README.md"
 authors = [
   { name = "0x0pharaoh", email = "moins.dev@gmail.com" }
+]
+keywords = [
+  "file comparison",
+  "file similarity",
+  "vector search",
+  "embedding",
+  "semantic search",
+  "file indexing",
+  "duplicate detection",
+  "search engine",
+  "python library",
+  "information retrieval"
 ]
 requires-python = ">=3.9"
 dependencies = [
