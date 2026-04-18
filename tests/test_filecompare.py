@@ -11,7 +11,7 @@ from pathlib import Path
 
 import pytest
 
-from filecompare import (
+from filemetric_engine import (
     FileIndex,
     MultiResult,
     PairResult,

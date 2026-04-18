@@ -7,7 +7,7 @@ Run with: pytest tests/ -v
 
 import pytest
 from pathlib import Path
-from filecompare import DynamicFileIndex, IndexRegistry, VectorCache, GroupNotFoundError
+from filemetric_engine import DynamicFileIndex, IndexRegistry, VectorCache, GroupNotFoundError
 
 
 TEXTS = {
