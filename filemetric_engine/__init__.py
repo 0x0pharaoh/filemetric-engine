@@ -54,5 +54,5 @@ __all__ = [
     "FileMatch",
 ]
 
-__version__ = "1.0.0"
-__author__ = "Gennifortune Technology Solutions Ltd"
+__version__ = "1.0.1"
+__author__ = "0x0pharaoh"
