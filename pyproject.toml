@@ -30,3 +30,6 @@ include = ["filemetric_engine*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[project.scripts]
+filemetric = "filemetric_engine.cli:main"

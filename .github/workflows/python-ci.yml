@@ -23,13 +23,9 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
           pip install hatchling
 
-      - name: Install dev deps
-        run: |
-          pip install -r dev-requirements.txt
-
       - name: Install package (editable)
         run: |
-          pip install -e .
+          pip install -e .[dev]
 
       - name: Lint
         run: |
