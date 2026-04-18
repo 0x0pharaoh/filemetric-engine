@@ -1,5 +1,5 @@
 """
-filecompare/compare.py
+filemetric_engine/compare.py
 ----------------------
 Simple functional API — no need to manage a FileIndex manually.
 
@@ -83,7 +83,7 @@ def compare_files(
 
     Example
     -------
-    >>> from filecompare import compare_files, VectorCache
+    >>> from filemetric_engine import compare_files, VectorCache
     >>> cache = VectorCache()
     >>> result = compare_files("doc_a.txt", "doc_b.txt", cache=cache)
     >>> print(result.common_in_percentage)
@@ -135,7 +135,7 @@ def compare_one_to_many(
 
     Example
     -------
-    >>> from filecompare import compare_one_to_many, VectorCache
+    >>> from filemetric_engine import compare_one_to_many, VectorCache
     >>> cache = VectorCache()
     >>> result = compare_one_to_many("new.txt", ["ref1.txt", "ref2.txt"], cache=cache)
     >>> for m in result.compare:

@@ -1,5 +1,5 @@
 """
-filecompare/types.py
+filemetric_engine/types.py
 --------------------
 Shared dataclasses / return types for the public API.
 """

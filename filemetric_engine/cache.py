@@ -1,5 +1,5 @@
 """
-filecompare/cache.py
+filemetric_engine/cache.py
 --------------------
 Persistent, hash-based cache for processed file vectors/text.
 
@@ -33,7 +33,7 @@ from typing import Optional
 import numpy as np
 
 
-_DEFAULT_CACHE_PATH = Path.home() / ".filecompare" / "cache.db"
+_DEFAULT_CACHE_PATH = Path.home() / ".filemetric_engine" / "cache.db"
 
 
 class VectorCache:
@@ -42,7 +42,7 @@ class VectorCache:
 
     Parameters
     ----------
-    db_path : Where to store the SQLite file. Defaults to ~/.filecompare/cache.db
+    db_path : Where to store the SQLite file. Defaults to ~/.filemetric_engine/cache.db
     """
 
     def __init__(self, db_path: str | Path | None = None):

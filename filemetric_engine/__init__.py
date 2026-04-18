@@ -1,5 +1,5 @@
 """
-filecompare
+filemetric_engine
 -----------
 A Python package for comparing text files by similarity percentage.
 
@@ -7,20 +7,20 @@ Quick start
 -----------
 
 # --- Simple pair comparison ---
-from filecompare import compare_files
+from filemetric_engine import compare_files
 result = compare_files("essay.txt", "reference.txt")
 print(result.to_dict())
 
 # --- One vs many (small sets) ---
-from filecompare import compare_one_to_many
+from filemetric_engine import compare_one_to_many
 result = compare_one_to_many("submission.txt", ["ref1.txt", "ref2.txt", "ref3.txt"])
 for m in result.compare:
     print(m.file, m.percentage)
 
 # --- Scale: 1 query vs 10,000 files (use FileIndex) ---
-from filecompare import FileIndex, VectorCache
+from filemetric_engine import FileIndex, VectorCache
 
-cache = VectorCache()                          # persists to ~/.filecompare/cache.db
+cache = VectorCache()                          # persists to ~/.filemetric_engine/cache.db
 idx = FileIndex.build(base_files, cache=cache) # build once
 idx.save("my_index.pkl")                       # save for later
 

@@ -1,5 +1,5 @@
 """
-tests/test_filecompare.py
+tests/test_filemetric_engine.py
 -------------------------
 Tests for all three layers: compare functions, FileIndex, and VectorCache.
 Run with: pytest tests/ -v

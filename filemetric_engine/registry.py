@@ -1,5 +1,5 @@
 """
-filecompare/registry.py
+filemetric_engine/registry.py
 -----------------------
 IndexRegistry: manage multiple named DynamicFileIndex groups.
 
@@ -23,7 +23,7 @@ Directory layout managed by registry:
 
 Usage
 -----
-from filecompare import IndexRegistry
+from filemetric_engine import IndexRegistry
 
 # Open (or create) a registry
 reg = IndexRegistry("/data/my_indexes")

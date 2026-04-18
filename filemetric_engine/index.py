@@ -1,5 +1,5 @@
 """
-filecompare/index.py - FileIndex and DynamicFileIndex
+filemetric_engine/index.py - FileIndex and DynamicFileIndex
 """
 
 from __future__ import annotations

@@ -1,4 +1,4 @@
-# filecompare
+# filemetric_engine
 
 Compare text files by similarity percentage — with caching and large-scale indexing.
 
@@ -22,7 +22,7 @@ pip install -e .
 ### 1. Simple pair comparison
 
 ```python
-from filecompare import compare_files
+from filemetric_engine import compare_files
 
 result = compare_files("essay.txt", "reference.txt")
 print(result.to_dict())
@@ -32,7 +32,7 @@ print(result.to_dict())
 ### 2. One vs many (small sets, < 500 files)
 
 ```python
-from filecompare import compare_one_to_many
+from filemetric_engine import compare_one_to_many
 
 result = compare_one_to_many(
     "submission.txt",
@@ -50,9 +50,9 @@ print(result.to_dict())
 ### 3. Large scale: 1 query vs 10,000 files (use FileIndex)
 
 ```python
-from filecompare import FileIndex, VectorCache
+from filemetric_engine import FileIndex, VectorCache
 
-# Step 1 — create a cache (persists to ~/.filecompare/cache.db)
+# Step 1 — create a cache (persists to ~/.filemetric_engine/cache.db)
 cache = VectorCache()
 
 # Step 2 — build index once (reads & vectorises all files; uses cache)
@@ -74,7 +74,7 @@ for m in result.compare:
 ### 4. Add cache to any function
 
 ```python
-from filecompare import compare_files, compare_one_to_many, VectorCache
+from filemetric_engine import compare_files, compare_one_to_many, VectorCache
 
 cache = VectorCache()  # reuse across calls
 
@@ -106,7 +106,7 @@ result = idx.query_text("some raw text content here", top_n=5)
 - Cache is keyed on **SHA-256 of file content** — not the filename.
 - If a file changes, it's automatically re-processed on next build.
 - Same content at different paths → processed once.
-- Cache database lives at `~/.filecompare/cache.db` by default.
+- Cache database lives at `~/.filemetric_engine/cache.db` by default.
 
 ```python
 cache = VectorCache()
